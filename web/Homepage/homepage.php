@@ -8,6 +8,9 @@
     </head>
     <body>
         <h1 class="Center">CS313 Kadous Homepage</h1>
+        <?php
+        echo "Todays date is " .date("l") . date("F, d, Y");
+        ?>
         <div class="Center">
                 <a href="assignments.html"><button>Assignments page</button></a>
         </div>
