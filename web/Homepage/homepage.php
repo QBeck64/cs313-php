@@ -28,10 +28,10 @@
                     <img src="/Homepage/homepageImages/spidey145.jpg" class="superImages" id="spideyImage">
                 </span>
                 <span id="ironman">
-                    <img src="/homepageImages/ironman25.jpg" class="superImages" id="ironmanImage">
+                    <img src="/Homepage/homepageImages/ironman25.jpg" class="superImages" id="ironmanImage">
                 </span>
                 <span id="ff">
-                    <img src="/homepageImages/FF52.jpg" class="superImages" id="ffImage">
+                    <img src="/Homepage/homepageImages/FF52.jpg" class="superImages" id="ffImage">
                 </span>
         </p>
     </body>
