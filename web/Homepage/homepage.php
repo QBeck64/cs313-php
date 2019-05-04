@@ -9,7 +9,7 @@
     <body>
         <h1 class="Center">CS313 Kadous Homepage</h1>
         <?php
-        echo "<h3 class='Center'>Todays date is" .date("l ") . date("F d, Y") . "</h3>";
+        echo "<h3 class='Center'>Todays date is " .date("l ") . date("F d, Y") . "</h3>";
         ?>
         <div class="Center">
                 <a href="assignments.html"><button>Assignments page</button></a>
