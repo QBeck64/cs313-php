@@ -25,7 +25,7 @@
         </p>
         <p class="supers">
                 <span id="spidey">
-                    <img src="Homepage/homepageImages/spidey145.jpg" class="superImages" id="spideyImage">
+                    <img src="/Homepage/homepageImages/spidey145.jpg" class="superImages" id="spideyImage">
                 </span>
                 <span id="ironman">
                     <img src="/homepageImages/ironman25.jpg" class="superImages" id="ironmanImage">
