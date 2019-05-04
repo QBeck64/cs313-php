@@ -8,9 +8,11 @@
     </head>
     <body>
         <h1 class="Center">CS313 Kadous Homepage</h1>
+        <!-- Using PHP, display the day of the week and the date -->
         <?php
         echo "<h3 class='Center'>Todays date is " .date("l ") . date("F d, Y") . "</h3>";
         ?>
+        <!-- Button to Assignments page -->
         <div class="Center">
                 <a href="assignments.html"><button>Assignments page</button></a>
         </div>
@@ -21,11 +23,13 @@
             My favorite comic group is Marvel, both MCU and comics.
         </p> 
         <h3 class="Center">My favorite superheroes are</h3>
+        <!-- Display 3 Names on the same line -->
         <p class="supers">
             <span id="spidey">Spider-Man</span>
             <span id="ironman">Iron-Man</span>
             <span id="ff">The Fantastic Four</span>
         </p>
+        <!-- Display 3 pictures along the same line -->
         <p class="supers">
                 <span id="spidey">
                     <img src="/Homepage/homepageImages/spidey145.jpg" class="superImages" id="spideyImage">

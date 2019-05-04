@@ -1,4 +1,6 @@
 $(document).ready(function(){
+    // All 3 functions change the selected image when moused over,
+    // The original image is replaced when the mouse leaves the image area.
     $("#ffImage").mouseover(function(){
         this.src="/Homepage/homepageImages/FF122.jpg"
     }).mouseout(function(){
