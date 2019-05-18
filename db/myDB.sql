@@ -13,13 +13,14 @@ CREATE TABLE entitylist (
 CREATE TABLE types (
     id SERIAL PRIMARY KEY,
     name VARCHAR(50) NOT NULL,
-    description TEXT NOT NULL
+    description TEXT
 );
 
 CREATE TABLE item (
     id SERIAL PRIMARY KEY,
     name VARCHAR(30) NOT NULL,
-    types_id INT NOT NULL REFERENCES types(id)
+    types_id INT NOT NULL REFERENCES types(id),
+    description TEXT NOT NULL
 );
 
 CREATE TABLE inventory (
