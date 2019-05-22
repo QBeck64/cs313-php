@@ -35,7 +35,12 @@
     $stmt->bindValue(':book', $book, PDO::PARAM_STR);
     $stmt->execute();
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    echo '<p>' . print_r($rows) . '</p>';
+    foreach ($rows as $r) {
+        echo '<p><a href="display.php?scripture=' . $r['id'] . '">';
+        echo $r['chapter'];
+        echo ':' . $r['verse'];
+        echo '</a></p>';
+    }
     ?>
     </body>
     </html>
