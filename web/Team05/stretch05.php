@@ -30,19 +30,12 @@
             }
     ?>
     <?php
-    foreach ($db->query('SELECT * FROM scriptures') as $row)
-    {
-      echo "<p><span>" . $row['book'] . ' ';
-      echo $row['chapter'];
-      echo ':' . $row['verse'] . ' - ' . "</span>";
-      echo '"' . $row['content'] . '"' . "</p>";
-      echo '<br/>';
-    }
+    $book = $_POST['book'];
+    $stmt = $db->prepare('SELECT * FROM scriptures WHERE book=:book');
+    $stmt->bindValue(':book', $book, PDO::PARAM_STR);
+    $stmt->execute();
+    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    echo '<p>' . print_r($rows) . '</p>';
     ?>
-
-    <form method="post" action="stretch05.php">
-        <input type="text" name="book" placeholder="book">
-        <input type="submit" value="search">
-    </form>
     </body>
-</html>
+    </html>
