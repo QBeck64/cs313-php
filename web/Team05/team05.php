@@ -8,7 +8,7 @@
     <?php
         try
             {
-            $dbUrl = getenv('postgres://xxkksjownvplid:b77f00d668e22a7da11dada4ff9389a010d65c5bdc90242410af0da0ca121c0e@ec2-54-221-243-211.compute-1.amazonaws.com:5432/d7hrvj4dtkji6b');
+            $dbUrl = getenv('DATABASE_URL');
 
             $dbOpts = parse_url($dbUrl);
 
