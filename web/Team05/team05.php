@@ -2,9 +2,10 @@
 <html>
     <head>
         <title>Week05 Team Activity</title>
-        <h1>Scripture Resources</h1>
+        <link rel="stylesheet" type="text/css" href="team05.css">
     </head>
     <body>
+    <h1>Scripture Resources</h1>
     <?php
         try
             {
