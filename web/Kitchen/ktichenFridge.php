@@ -12,8 +12,8 @@ $db = get_db();
 
 <body>
 <div class="topnav">
-  <a class="active" href="homepage.php">Homepage</a>
-  <a href="kitchenFridge.php">Kitchen Fridge</a>
+  <a href="homepage.php">Homepage</a>
+  <a class="active" href="kitchenFridge.php">Kitchen Fridge</a>
   <a href="communityFridge.php">Community Fridge</a>
   <a href="pantry.php">Pantry</a>
   <a href="storageCloset.php">Storage Closet</a>
