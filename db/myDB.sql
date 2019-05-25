@@ -52,7 +52,12 @@ INSERT INTO username (name, password)
 	VALUES ('Kyle', 'Ilikefood');
 
 INSERT INTO item (name, types_id, description)
-	VALUES ('Mustard', 1, 'Delicious Mustard for Hot dogs!!');
+	VALUES ('Milk', 2, '2% milk from the cow'),
+	('Pepsi', 2, '2 liter bottle'),
+	('Cheetos', 4, 'Regular cheetos, no flames'),
+	('Chocolate Pie', 3, 'Delicious pie!!');
 
 INSERT INTO inventory (username_id, item_id, expDate, quantity, entitylist_id)
-	VALUES (1, 1, '07/03/1995', '4', 8);
+	VALUES (1, 2, '05/03/2013', '2', 5),
+	(1, 3, '01/09/2020', '4', 6),
+	(1, 4, '12/15/2018', '1', 7);
