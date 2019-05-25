@@ -7,7 +7,7 @@ $db = get_db();
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Homepage</title>
+	<title>Community Fridge</title>
 </head>
 
 <body>

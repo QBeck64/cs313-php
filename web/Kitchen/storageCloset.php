@@ -7,7 +7,7 @@ $db = get_db();
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Homepage</title>
+	<title>Storage Closet</title>
 </head>
 
 <body>
@@ -22,13 +22,13 @@ $db = get_db();
 <h1>Scripture Resources</h1>
 
 <?php
-    foreach ($db->query('SELECT * FROM inventory') as $row)
-    {
-      echo "<p><span>" . $row['book'] . ' ';
-      echo $row['chapter'];
-      echo ':' . $row['verse'] . ' - ' . "</span>";
-      echo '"' . $row['content'] . '"' . "</p>";
-      echo '<br/>';
+    $entity = "8";
+    $stmt = $db->prepare('SELECT * FROM inventory WHERE entitylist_id=:entitylist_id');
+    $stmt->bindValue(':entitylist_id', $entity, PDO::PARAM_STR);
+    $stmt->execute();
+    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    foreach ($rows as $r) {
+        echo $r['expdate'];
     }
     ?>
 

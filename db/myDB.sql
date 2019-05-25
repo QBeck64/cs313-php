@@ -47,3 +47,12 @@ INSERT INTO types (name, description)
     ('Desserts', ''),
     ('Snacks', ''),
     ('Meals', '');
+
+INSERT INTO username (name, password)
+	VALUES ('Kyle', 'Ilikefood');
+
+INSERT INTO item (name, types_id, description)
+	VALUES ('Mustard', 1, 'Delicious Mustard for Hot dogs!!');
+
+INSERT INTO inventory (username_id, item_id, expDate, quantity, entitylist_id)
+	VALUES (1, 1, '07/03/1995', '4', 8);
