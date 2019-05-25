@@ -24,12 +24,12 @@ $db = get_db();
 
 <?php
     $entity = "8";
-    $stmt = $db->prepare('SELECT * FROM inventory WHERE entitylist_id=:entitylist_id');
+    $stmt = $db->prepare('SELECT * FROM inventory JOIN item ON inventory.item_id=item.id WHERE entitylist_id=:entitylist_id');
     $stmt->bindValue(':entitylist_id', $entity, PDO::PARAM_STR);
     $stmt->execute();
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     foreach ($rows as $r) {
-        $db->prepare('SELECT * FROM username WHERE id=:id');
+        echo r['item_name'];
     }
     ?>
 
