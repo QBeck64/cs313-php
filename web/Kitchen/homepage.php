@@ -16,12 +16,12 @@ $db = get_db();
 <h1>Scripture Resources</h1>
 
 <?php
-    foreach ($db->query('SELECT * FROM inventory') as $row)
+    foreach ($db->query('SELECT * FROM scriptures') as $row)
     {
-      echo "<p><span>" . $row['username_id'] . ' ';
-      echo $row['item_id'];
-      echo ':' . $row['expDate'] . ' - ' . "</span>";
-      echo '"' . $row['quantity'] . $row['entitylist_id'] . '"' . "</p>";
+      echo "<p><span>" . $row['book'] . ' ';
+      echo $row['chapter'];
+      echo ':' . $row['verse'] . ' - ' . "</span>";
+      echo '"' . $row['content'] . '"' . "</p>";
       echo '<br/>';
     }
     ?>
