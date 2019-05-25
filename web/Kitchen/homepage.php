@@ -4,6 +4,17 @@ $db = get_db();
 
 ?>
 
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Scripture List</title>
+</head>
+
+<body>
+<div>
+
+<h1>Scripture Resources</h1>
+
 <?php
     foreach ($db->query('SELECT * FROM inventory') as $row)
     {
@@ -14,3 +25,7 @@ $db = get_db();
       echo '<br/>';
     }
     ?>
+
+    </div>
+    </body>
+    </html>
