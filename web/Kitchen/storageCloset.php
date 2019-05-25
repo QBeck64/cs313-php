@@ -28,7 +28,7 @@ $db = get_db();
     $stmt->execute();
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     foreach ($rows as $r) {
-        echo $r['expdate'];
+        $db->prepare('SELECT * FROM username WHERE id=:id');
     }
     ?>
 
