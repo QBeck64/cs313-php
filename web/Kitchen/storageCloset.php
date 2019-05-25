@@ -29,7 +29,7 @@ $db = get_db();
     $stmt->execute();
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     foreach ($rows as $r) {
-        echo $r['name'];
+        echo $r['item.name'];
     }
     ?>
 
