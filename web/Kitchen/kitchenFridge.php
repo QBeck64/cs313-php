@@ -8,6 +8,7 @@ $db = get_db();
 <html>
 <head>
 	<title>Kitchen Fridge</title>
+  <link rel="stylesheet" type="text/css" href="kitchen.css">
 </head>
 
 <body>
