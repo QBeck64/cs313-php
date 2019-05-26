@@ -22,7 +22,7 @@ $db = get_db();
 </div> 
 
 <h1>Community Fridge</h1>
-<p>The institute building communcity fridge. No holds bar, all food is us for grabs. 
+<p>The institute building communcity fridge. No holds bar, all food is us for grabs.<br> 
     But beware, the fridge will be emptied of all contents every Friday at 2pm.</p>
 
 <?php
