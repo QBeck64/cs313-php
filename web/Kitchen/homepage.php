@@ -22,5 +22,19 @@ $db = get_db();
 
 <h1>Scripture Resources</h1>
 
+<?php
+    $stmt = $db->prepare('SELECT * FROM inventory JOIN item ON inventory.item_id=item.id 
+                        JOIN username ON inventory.username_id=username.id 
+                        JOIN types ON item.types_id=types.id 
+                        JOIN entitylist ON inventory.entitylist_id=entitylist.id');
+    $stmt->execute();
+    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    echo "<table><th>Username</th><th>Item</th><th>Type</th><th>Expiration Date</th><th>Quantity</th><tr>";
+    foreach ($rows as $r) {
+        echo "<tr><td>" . $r['username_name'] . "</td><td>" . $r['item_name'] . "</td><td>" . $r['types_name'] . "</td><td>" . $r['expdate'] . "</td><td>" . $r['quantity'] . "</td></tr>";
+    }
+
+    echo "</table>";
+    ?>
     </body>
     </html>
