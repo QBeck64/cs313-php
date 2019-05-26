@@ -24,11 +24,11 @@ $db = get_db();
 
 <?php
 $statement = $db->query('SELECT entity_description FROM entitylist');
-while ($rows = $statement->fetch(PDO::FETCH_ASSOC))
+while ($row = $statement->fetch(PDO::FETCH_ASSOC))
 {
-    if ($rows['entitylist_id'] == "8")
+    if ($row['entitylist_id'] == "8")
     {
-        echo $rows['entity_description'];
+        echo $row['entity_description'];
     }
 }
 ?>
