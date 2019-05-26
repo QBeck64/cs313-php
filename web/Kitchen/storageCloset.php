@@ -32,7 +32,7 @@ $db = get_db();
     $stmt->bindValue(':entitylist_id', $entity, PDO::PARAM_STR);
     $stmt->execute();
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    echo "<h2>" . "erfefefr" . "</h2>";
+    echo "<h2>" . $r['username_name'] . "</h2>";
     echo "<table><th>Username</th><th>Item</th><th>Type</th><th>Expiration Date</th><th>Quantity</th><tr>";
     foreach ($rows as $r) {
         echo "<tr><td>" . $r['username_name'] . "</td><td>" . $r['item_name'] . "</td><td>" . $r['types_name'] . "</td><td>" . $r['expdate'] . "</td><td>" . $r['quantity'] . "</td></tr>";
