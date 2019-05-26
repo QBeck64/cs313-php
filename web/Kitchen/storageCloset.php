@@ -28,6 +28,10 @@ $db = get_db();
     $statement->bindValue(':entitylist.id', $entity, PDO::PARAM_STR);
     $statement->execute();
     $results = $statement->fetchAll(PDO::FETCH_ASSOC);
+    echo "<h2>" . $results['entity_description'] . "</h2>";
+    ?>
+
+<?php
     $stmt = $db->prepare('SELECT * FROM inventory JOIN item ON inventory.item_id=item.id 
                         JOIN username ON inventory.username_id=username.id 
                         JOIN types ON item.types_id=types.id 
@@ -36,7 +40,6 @@ $db = get_db();
     $stmt->bindValue(':entitylist_id', $entity, PDO::PARAM_STR);
     $stmt->execute();
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    echo "<h2>" . $results['entity_description'] . "</h2>";
     echo "<table><th>Username</th><th>Item</th><th>Type</th><th>Expiration Date</th><th>Quantity</th><tr>";
     foreach ($rows as $r) {
         echo "<tr><td>" . $r['username_name'] . "</td><td>" . $r['item_name'] . "</td><td>" . $r['types_name'] . "</td><td>" . $r['expdate'] . "</td><td>" . $r['quantity'] . "</td></tr>";
