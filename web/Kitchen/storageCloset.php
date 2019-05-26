@@ -33,7 +33,7 @@ $db = get_db();
     $stmt->execute();
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     foreach ($rows as $r) {
-        echo $r['item_name'] . " " . $r['username_name'] . " " . $r['types_name'];
+        echo $r['item_name'] . " " . $r['username_name'] . " " . $r['types_name'] . " " . $r['entitylist_storage'];
     }
     ?>
 
