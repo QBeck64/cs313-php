@@ -23,7 +23,7 @@ $db = get_db();
 <h1>Scripture Resources</h1>
 
 <?php
-$statement = $db->query('SELECT entity_description FROM entitylist');
+$statement = $db->query('SELECT entity_description FROM entitylist.id="8"');
 while ($rows = $statement->fetch(PDO::FETCH_ASSOC))
 {
   echo $rows['entity_description'];
