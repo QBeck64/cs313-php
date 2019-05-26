@@ -23,16 +23,22 @@ $db = get_db();
 <h1>Scripture Resources</h1>
 
 <?php
-    foreach ($db->query('SELECT * FROM scriptures') as $row)
-    {
-      echo "<p><span>" . $row['book'] . ' ';
-      echo $row['chapter'];
-      echo ':' . $row['verse'] . ' - ' . "</span>";
-      echo '"' . $row['content'] . '"' . "</p>";
-      echo '<br/>';
+    $entity = "7";
+    $stmt = $db->prepare('SELECT * FROM inventory JOIN item ON inventory.item_id=item.id 
+                        JOIN username ON inventory.username_id=username.id 
+                        JOIN types ON item.types_id=types.id 
+                        JOIN entitylist ON inventory.entitylist_id=entitylist.id 
+                        WHERE entitylist_id=:entitylist_id');
+    $stmt->bindValue(':entitylist_id', $entity, PDO::PARAM_STR);
+    $stmt->execute();
+    $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    echo "<h2>" . $r["entitylist_description"] . "</h2>";
+    echo "<table><th>Username</th><th>Item</th><th>Type</th><th>Expiration Date</th><th>Quantity</th><tr>";
+    foreach ($rows as $r) {
+        echo "<tr><td>" . $r['username_name'] . "</td><td>" . $r['item_name'] . "</td><td>" . $r['types_name'] . "</td><td>" . $r['expdate'] . "</td><td>" . $r['quantity'] . "</td></tr>";
     }
-    ?>
 
-    </div>
+    echo "</table>";
+    ?>
     </body>
     </html>
