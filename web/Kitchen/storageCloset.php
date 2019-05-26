@@ -31,7 +31,14 @@ $db = get_db();
     $stmt->bindValue(':entitylist_id', $entity, PDO::PARAM_STR);
     $stmt->execute();
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    echo $rows['entity_description'];
+    $count = 1;
+    foreach ($rows as $r) {
+        while ($count > 0) {
+            echo $r['entity_description'];
+            $count = 0;
+        }
+        
+    }
     echo "<table><th>Username</th><th>Item</th><th>Type</th><th>Expiration Date</th><th>Quantity</th><tr>";
     foreach ($rows as $r) {
         echo "<tr><td>" . $r['username_name'] . "</td><td>" . $r['item_name'] . "</td><td>" . $r['types_name'] . "</td><td>" . $r['expdate'] . "</td><td>" . $r['quantity'] . "</td></tr>";
