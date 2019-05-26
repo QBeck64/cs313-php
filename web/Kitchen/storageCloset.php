@@ -24,9 +24,9 @@ $db = get_db();
 
 <?php
 $statement = $db->query('SELECT entity_description FROM entitylist WHERE entitlist.id=8');
-while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+while ($rows = $statement->fetch(PDO::FETCH_ASSOC))
 {
-  echo $row['entity_description'];
+  echo $rows['entity_description'];
 }
 ?>
 <?php
