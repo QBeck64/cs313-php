@@ -21,7 +21,7 @@ $db = get_db();
   <a href="storageCloset.php">Storage Closet</a>
 </div> 
 
-<h1>Scripture Resources</h1>
+<h1>The Kitchen</h1>
 
 <?php
     $stmt = $db->prepare('SELECT * FROM inventory JOIN item ON inventory.item_id=item.id 
