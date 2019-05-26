@@ -20,7 +20,9 @@ $db = get_db();
   <a href="storageCloset.php">Storage Closet</a>
 </div> 
 
-<h1>Scripture Resources</h1>
+<h1>Community Fridge</h1>
+<h2>The institute building communcity fridge. No holds bar, all food is us for grabs. 
+    But beware, the fridge will be emptied of all contents every Friday at 2pm.</h2>
 
 <?php
     $entity = "6";

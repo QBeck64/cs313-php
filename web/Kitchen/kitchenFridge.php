@@ -20,7 +20,8 @@ $db = get_db();
   <a href="storageCloset.php">Storage Closet</a>
 </div> 
 
-<h1>Scripture Resources</h1>
+<h1>Kitchen Fridge</h1>
+<h2>The YSA 1st ward fridge. If locked, contact the food committee chairman.</h2>
 
 <?php
     $entity = "5";

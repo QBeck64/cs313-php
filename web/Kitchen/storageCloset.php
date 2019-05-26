@@ -20,7 +20,8 @@ $db = get_db();
   <a class="active" href="storageCloset.php">Storage Closet</a>
 </div> 
 
-<h1>Scripture Resources</h1>
+<h1>Storage Closet</h1>
+<h2>The YSA 1st ward storage closet. Located in the hall adjacent to the kitchen door.</h2>
 
 <?php
     $stmt = $db->prepare('SELECT * FROM inventory JOIN item ON inventory.item_id=item.id 
@@ -31,14 +32,6 @@ $db = get_db();
     $stmt->bindValue(':entitylist_id', $entity, PDO::PARAM_STR);
     $stmt->execute();
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-    $count = 1;
-    foreach ($rows as $r) {
-        while ($count > 0) {
-            echo $r['entity_description'];
-            $count = 0;
-        }
-        
-    }
     echo "<table><th>Username</th><th>Item</th><th>Type</th><th>Expiration Date</th><th>Quantity</th><tr>";
     foreach ($rows as $r) {
         echo "<tr><td>" . $r['username_name'] . "</td><td>" . $r['item_name'] . "</td><td>" . $r['types_name'] . "</td><td>" . $r['expdate'] . "</td><td>" . $r['quantity'] . "</td></tr>";
