@@ -24,7 +24,9 @@ $db = get_db();
 
 <?php
     $entity = "8";
-    $statement = $db->query('SELECT entity_description FROM entitylist WHERE entitylist.id = 8');
+    $statement = $db->query('SELECT entity_description FROM entitylist WHERE entitylist.id =entitylist.id');
+    $statement->bindValue(':entitylist.id', $entity, PDO::PARAM_STR);
+    $statement->execute();
     $results = $statement->fetchAll(PDO::FETCH_ASSOC);
     $stmt = $db->prepare('SELECT * FROM inventory JOIN item ON inventory.item_id=item.id 
                         JOIN username ON inventory.username_id=username.id 
