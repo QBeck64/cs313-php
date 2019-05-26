@@ -12,6 +12,7 @@ $db = get_db();
 </head>
 
 <body>
+    <h1>What's in the Kitchen?<h1>
 <div class="topnav">
   <a class="active" href="homepage.php">Homepage</a>
   <a href="kitchenFridge.php">Kitchen Fridge</a>
