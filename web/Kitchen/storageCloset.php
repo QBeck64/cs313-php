@@ -23,14 +23,12 @@ $db = get_db();
 <h1>Scripture Resources</h1>
 
 <?php
-    $entity = "8";
-    $statement = $db->query('SELECT entity_description FROM entitylist WHERE entitylist.id =entitylist.id');
-    $statement->bindValue(':entitylist.id', $entity, PDO::PARAM_STR);
-    $statement->execute();
-    $results = $statement->fetchAll(PDO::FETCH_ASSOC);
-    echo "<h2>" . $results['entity_description'] . "</h2>";
-    ?>
-
+$statement = $db->query('SELECT entity_description FROM entitylist WHERE entitlist.id=8');
+while ($row = $statement->fetch(PDO::FETCH_ASSOC))
+{
+  echo $row['entity_description'];
+}
+?>
 <?php
     $stmt = $db->prepare('SELECT * FROM inventory JOIN item ON inventory.item_id=item.id 
                         JOIN username ON inventory.username_id=username.id 
