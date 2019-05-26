@@ -21,7 +21,7 @@ $db = get_db();
 </div> 
 
 <h1>Pantry</h1>
-<h2>The YSA 1st ward pantry. Located adjacent to the 1st ward fridge.</h2>
+<p>The YSA 1st ward pantry. Located adjacent to the 1st ward fridge.</p>
 
 <?php
     $entity = "7";

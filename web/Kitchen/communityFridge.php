@@ -21,8 +21,8 @@ $db = get_db();
 </div> 
 
 <h1>Community Fridge</h1>
-<h2>The institute building communcity fridge. No holds bar, all food is us for grabs. 
-    But beware, the fridge will be emptied of all contents every Friday at 2pm.</h2>
+<p>The institute building communcity fridge. No holds bar, all food is us for grabs. 
+    But beware, the fridge will be emptied of all contents every Friday at 2pm.</p>
 
 <?php
     $entity = "6";

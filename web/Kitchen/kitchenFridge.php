@@ -21,7 +21,7 @@ $db = get_db();
 </div> 
 
 <h1>Kitchen Fridge</h1>
-<h2>The YSA 1st ward fridge. If locked, contact the food committee chairman.</h2>
+<p>The YSA 1st ward fridge. If locked, contact the food committee chairman.</p>
 
 <?php
     $entity = "5";

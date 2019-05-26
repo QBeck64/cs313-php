@@ -21,9 +21,10 @@ $db = get_db();
 </div> 
 
 <h1>Storage Closet</h1>
-<h2>The YSA 1st ward storage closet. Located in the hall adjacent to the kitchen door.</h2>
+<p>The YSA 1st ward storage closet. Located in the hall adjacent to the kitchen door.</p>
 
 <?php
+    $entity = 8;
     $stmt = $db->prepare('SELECT * FROM inventory JOIN item ON inventory.item_id=item.id 
                         JOIN username ON inventory.username_id=username.id 
                         JOIN types ON item.types_id=types.id 
