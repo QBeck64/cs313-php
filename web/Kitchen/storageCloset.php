@@ -26,7 +26,9 @@ $db = get_db();
     $entity = "8";
     $stmt = $db->prepare('SELECT * FROM inventory JOIN item ON inventory.item_id=item.id 
                         JOIN username ON inventory.username_id=username.id 
-                        JOIN types ON item.types_id=types.id WHERE entitylist_id=:entitylist_id');
+                        JOIN types ON item.types_id=types.id 
+                        JOIN entitylist ON inventory.entitylist_id=entitylist.id 
+                        WHERE entitylist_id=:entitylist_id');
     $stmt->bindValue(':entitylist_id', $entity, PDO::PARAM_STR);
     $stmt->execute();
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
