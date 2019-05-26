@@ -41,4 +41,5 @@ body {
   table {
       align-content: center;
       border-collapse: collapse;
+      margin: 0px auto;
   }
