@@ -7,7 +7,7 @@ $stmt = $db->prepare('SELECT * FROM username WHERE username_name=$username');
 $stmt->execute();
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-$new_page = "homepage.php?user=$username";
+$new_page = "homepage.php";
 header("Location: $new_page");
 die();
 ?>
