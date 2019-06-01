@@ -50,10 +50,6 @@ session_start();
     echo "</table>";
     
     ?>
-    <?php
-    foreach ($types as $t) {
-        echo $t["types_name"];
-    }
-    ?>
+    
     </body>
     </html>
