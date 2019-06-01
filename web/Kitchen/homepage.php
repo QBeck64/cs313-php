@@ -6,8 +6,8 @@ session_start();
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
     // username and password sent from form 
-    $username = $_POST['username'];
-    $password = $_POST['password'];
+    $username = $_POST['Username'];
+    $password = $_POST['Password'];
     if (empty($username)) {
         echo "Name is empty";
     } else {
@@ -33,11 +33,13 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
   <a href="communityFridge.php">Community Fridge</a>
   <a href="pantry.php">Pantry</a>
   <a href="storageCloset.php">Storage Closet</a>
-  <a form action = "pantry.php" method = "post">
-        <label>UserName  :</label><input type = "text" name = "username"/>
-        <label>Password  :</label><input type = "password" name = "password"/>
-        <input type = "submit" value = " Submit "/>
-        </form></a>
+  <div class="login-container">
+    <form action="pantry.php">
+      <input type="text" placeholder="Username" name="username">
+      <input type="text" placeholder="Password" name="psw">
+      <button type="submit">Login</button>
+    </form>
+  </div>
 </div> 
 
 <h1>The Kitchen</h1>
