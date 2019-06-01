@@ -2,7 +2,7 @@
 function getTypes() {
     global $db;
     $query = "SELECT * FROM types
-        ORDER BY name";
+        ORDER BY types_name";
     $statement = $db->prepare($query);
     $statement->execute();
     $types = $statement->fetchAll();
