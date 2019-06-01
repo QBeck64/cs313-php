@@ -7,12 +7,7 @@ session_start();
 if($_SERVER["REQUEST_METHOD"] == "POST") {
     // username and password sent from form 
     $username = $_POST['username'];
-    $password = $_POST['psw'];   
-
-    $statement = $db->prepare('SELECT * FROM username WHERE username_name=$username');
-   // $row = $statement->fetchAll(PDO::FETCH_ASSOC);
-    //$statement->execute();
-    
+    $password = $_POST['psw'];      
      
  }
 ?>
@@ -33,7 +28,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
   <a href="pantry.php">Pantry</a>
   <a href="storageCloset.php">Storage Closet</a>
   <div class="login-container">
-    <form action="<?=$_SERVER['PHP_SELF'];?>" method="post">
+    <form action="verifyUser.php" method="post">
       <input type="text" placeholder="Username" name="username">
       <input type="text" placeholder="Password" name="psw">
       <button type="submit">Login</button>
