@@ -33,7 +33,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
   <a href="communityFridge.php">Community Fridge</a>
   <a href="pantry.php">Pantry</a>
   <a href="storageCloset.php">Storage Closet</a>
-  <a form action = "homepage.php" method = "post">
+  <a form action = "kitchen.php" method = "post">
         <label>UserName  :</label><input type = "text" name = "username"/>
         <label>Password  :</label><input type = "password" name = "password"/>
         <input type = "submit" value = " Submit "/>
