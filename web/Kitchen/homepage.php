@@ -21,10 +21,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
        session_register("myusername");
        $_SESSION['login_user'] = $myusername;
        
-       header("location: kitchen.php");
-    }else {
-       $error = "Your Login Name or Password is invalid";
-    }
+      echo $_SESSION;
  }
 ?>
 
