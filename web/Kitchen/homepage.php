@@ -10,8 +10,9 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST['psw'];   
 
     $statement = $db->prepare('SELECT * FROM username WHERE username_name=$username');
-    $statement->execute();
     $row = $statement->fetchAll(PDO::FETCH_ASSOC);
+    $statement->execute();
+    
      
  }
 ?>
