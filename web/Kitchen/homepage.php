@@ -50,6 +50,9 @@ session_start();
     echo "</table>";
     
     ?>
+    <?php
+    $types = getTypes();
+    ?>
     
     </body>
     </html>
