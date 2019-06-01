@@ -19,6 +19,7 @@ $db = get_db();
   <a href="communityFridge.php">Community Fridge</a>
   <a href="pantry.php">Pantry</a>
   <a class="active" href="storageCloset.php">Storage Closet</a>
+  <p>Currently logged on:<?php echo $_SESSION["username"]?></p>
 </div> 
 
 <h1>Storage Closet</h1>
