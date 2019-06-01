@@ -50,11 +50,20 @@ session_start();
     echo "</table>";
     
     ?>
+    <div class="Input-container">
+        <form action="new_item.php" method="post">
+        <input type="text" placeholder="Item Name" name="newItem">
+        <select name="type">
+        <?php
+         $types = getTypes();
+         foreach($types as $t) {
+             echo "option value=" . $t['types_name'] . ">" . $t['types'] . "</option";
+         }
+        ?>
+        </select>
+    </div>
     <?php
-    $types = getTypes();
-    foreach($types as $t) {
-        echo $t["types_name"];
-    }
+    
 
     $storage = getStorage();
     foreach($storage as $s) {
