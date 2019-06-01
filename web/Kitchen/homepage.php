@@ -6,13 +6,9 @@ session_start();
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
     // username and password sent from form 
-    $username = $_POST['username'];
-    $password = $_POST['psw'];
-    if (empty($username)) {
-        echo "Name is empty";
-    } else {
-        echo $username;
-    }
+    $myusername = mysqli_real_escape_string($db,$_POST['username']);
+    $mypassword = mysqli_real_escape_string($db,$_POST['password']); 
+    echo $myusername;
    
      
  }
