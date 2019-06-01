@@ -3,13 +3,7 @@ require "dbConnect.php";
 $db = get_db();
 
 session_start();
-
-if($_SERVER["REQUEST_METHOD"] == "POST") {
-    // username and password sent from form 
-    $username = $_POST['username'];
-    $password = $_POST['psw'];      
-     
- }
+echo $_SESSION["username"];
 ?>
 
 <!DOCTYPE html>
