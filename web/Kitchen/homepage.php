@@ -34,7 +34,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
   <a href="pantry.php">Pantry</a>
   <a href="storageCloset.php">Storage Closet</a>
   <div class="login-container">
-    <form action="" method="post">
+    <form action="<?=$_SERVER['PHP_SELF'];?>" method="post">
       <input type="text" placeholder="Username" name="username">
       <input type="text" placeholder="Password" name="psw">
       <button type="submit">Login</button>
