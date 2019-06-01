@@ -52,6 +52,9 @@ session_start();
     ?>
     <?php
     $types = getTypes();
+    foreach($types as $t) {
+        echo $t["types_name"];
+    }
     ?>
     
     </body>
