@@ -6,8 +6,8 @@ session_start();
 
 if($_SERVER["REQUEST_METHOD"] == "POST") {
     // username and password sent from form 
-    $username = $_POST['Username'];
-    $password = $_POST['Password'];
+    $username = $_POST['username'];
+    $password = $_POST['psw'];
     if (empty($username)) {
         echo "Name is empty";
     } else {
