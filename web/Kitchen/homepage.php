@@ -37,7 +37,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST") {
         <label>UserName  :</label><input type = "text" name = "username"/>
         <label>Password  :</label><input type = "password" name = "password"/>
         <input type = "submit" value = " Submit "/>
-        </form>
+        </form></a>
 </div> 
 
 <h1>The Kitchen</h1>
