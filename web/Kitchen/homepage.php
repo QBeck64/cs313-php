@@ -28,6 +28,7 @@ echo $_SESSION["username"];
       <button type="submit">Login</button>
     </form>
   </div>
+  <p>Currently logged on:<?php echo $_SESSION["username"]?></p>
 </div> 
 
 <h1>The Kitchen</h1>
