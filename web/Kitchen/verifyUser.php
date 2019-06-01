@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 $user = htmlspecialchars($_POST['username']);
 $psw = htmlspecialchars($_POST['psw']);
 
@@ -9,6 +12,13 @@ $stmt = $db->prepare('SELECT * FROM username WHERE username_name=:user AND passw
 $stmt->bindvalue(':user', $user, PDO::PARAM_STR);
 $stmt->bindvalue(':psw', $psw, PDO::PARAM_STR);
 $stmt->execute();
+$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+foreach ($rows as $r) {
+    if ($r['username_name']=$user AND $r['password']=$psw) {
+        $_SESSION['username'] = $r['username_name'];
+    }
+}
 
 $new_page = "homepage.php";
 header("Location: $new_page");
