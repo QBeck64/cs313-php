@@ -57,7 +57,7 @@ session_start();
         <?php
          $types = getTypes();
          foreach($types as $t) {
-             echo "option value=" . $t['types_name'] . ">" . $t['types_name'] . "</option";
+             echo "option value=" . $t['types_name'] . ">" . "hello" . "</option";
          }
         ?>
         </select>
