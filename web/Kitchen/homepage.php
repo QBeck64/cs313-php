@@ -20,9 +20,9 @@ $db = get_db();
   <a href="pantry.php">Pantry</a>
   <a href="storageCloset.php">Storage Closet</a>
   <a form action = "" method = "post">
-                  <label>UserName  :</label><input type = "text" name = "username"/><br /><br />
-                  <label>Password  :</label><input type = "password" name = "password"/><br/><br />
-                  <input type = "submit" value = " Submit "/><br />
+                  <label>UserName  :</label><input type = "text" name = "username"/>\
+                  <label>Password  :</label><input type = "password" name = "password"/>
+                  <input type = "submit" value = " Submit "/>
                </form>
 </div> 
 
