@@ -41,25 +41,14 @@ session_start();
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     echo "<table><th>Username</th><th>Item</th><th>Type</th><th>Expiration Date</th><th>Quantity</th><th>Storage Location</th<tr>";
     foreach ($rows as $r) {
-        echo "<tr><td>" . $r['username_name'] . "</td><td>" . $r['item_name'] . "</td><td>" . $r['types_name'] . "</td><td>" . $r['expdate'] . "</td><td>" . $r['quantity'] . "</td><td>" . $r['storage'] . "</tr>";
+        echo "<tr><td>" . $r['item_description'] . "</td><td>" . $r['item_name'] . "</td><td>" . $r['types_name'] . "</td><td>" . $r['expdate'] . "</td><td>" . $r['quantity'] . "</td><td>" . $r['storage'] . "</tr>";
     }
 
     echo "</table>";
     
     ?>
     <?php
-    $stmt = $db->prepare('SELECT * FROM inventory JOIN item ON inventory.item_id=item.id 
-    JOIN username ON inventory.username_id=username.id 
-    JOIN types ON item.types_id=types.id 
-    JOIN entitylist ON inventory.entitylist_id=entitylist.id');
-$stmt->execute();
-$rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
-echo "<table><th>Username</th><th>Item</th><th>Type</th><th>Expiration Date</th><th>Quantity</th><th>Storage Location</th<tr>";
-foreach ($rows as $r) {
-echo "<tr><td>" . $r['username_name'] . "</td><td>" . $r['item_name'] . "</td><td>" . $r['types_name'] . "</td><td>" . $r['expdate'] . "</td><td>" . $r['quantity'] . "</td><td>" . $r['storage'] . "</tr>";
-}
-
-echo "</table>";
+    $stmt = $db->prepare('SELECT ')
     ?>
     </body>
     </html>
