@@ -55,6 +55,11 @@ session_start();
     foreach($types as $t) {
         echo $t["types_name"];
     }
+
+    $storage = getStorage();
+    foreach($storage as $s) {
+        echo $s["storage"];
+    }
     ?>
     
     </body>

@@ -11,7 +11,14 @@ function getTypes() {
 }
 
 function getStorage() {
-
+    global $db;
+    $query = "SELECT * FROM entitylist
+        ORDER BY storage";
+    $statement = $db->prepare($query);
+    $statement->execute();
+    $entity = $statement->fetchAll();
+    $statement->closeCursor();
+    return $entity;
 }
 
 ?>
