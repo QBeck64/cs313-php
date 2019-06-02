@@ -25,7 +25,7 @@ function insertItem($data) {
     global $db;
     $query = "INSERT INTO item
         (item_name, types_id, item_description)
-        VALUES (:item_name, :types_id, :description)";
+        VALUES (:item_name, :types_id, :item_description)";
     $statement = $db->prepare($query);
     $statement->bindValue(':item_name',$data['newItem']);
     $statement->bindValue(':types_id',$data['type']);
