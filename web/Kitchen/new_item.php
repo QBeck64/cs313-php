@@ -1,4 +1,4 @@
-<?
+<?php
 include("db_connect.php");
 $db = get_db();
 
@@ -13,11 +13,6 @@ $data['expdate'] = filter_var($_POST['expdate'], FILTER_SANITIZE_STRING);
 $data['quantity'] = filter_var($_POST['quantity'], FILTER_SANITIZE_STRING);
 $data['storage'] = filter_var($_POST['storage'], FILTER_SANITIZE_STRING);
 
-$itemID = insertItem($data);
-
-$userID = $_SESSION['userID'];
-
-$newRow = addRow($data, $itemID, $userID);
 
 
 $new_page = "homepage.php";
