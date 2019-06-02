@@ -61,17 +61,16 @@ session_start();
          }
         ?>
         </select>
+        <input type="text" placeholder="Item Description" name="newDescription">
         <input type="date" name="expdate">
         <input type="number" name="quantity" min="1" max="50">
+        <?php
+        $storage = getStorage();
+        foreach($storage as $s) {
+            echo "<option value='" . $s['storage'] . "'>" . $s['storage'] . "</option>";
+        }
+        ?>
     </div>
-    <?php
-    
-
-    $storage = getStorage();
-    foreach($storage as $s) {
-        echo $s["storage"];
-    }
-    ?>
     
     </body>
     </html>
