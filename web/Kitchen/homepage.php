@@ -61,6 +61,8 @@ session_start();
          }
         ?>
         </select>
+        <input type="date" name="expdate">
+        <input type="number" name="quantity" min="1" max="50">
     </div>
     <?php
     
