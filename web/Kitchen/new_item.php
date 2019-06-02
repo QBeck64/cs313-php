@@ -1,6 +1,6 @@
 <?php
 session_start();
-include("dbConnect.php");
+require "dbConnect.php";
 $db = get_db();
 
 $userID = $_SESSION['userID'];
