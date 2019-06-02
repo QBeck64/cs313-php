@@ -14,9 +14,7 @@ $data['expdate'] =  date('Y-m-d', strtotime($_POST['expdate']));
 $data['quantity'] = htmlspecialchars($_POST['quantity']);
 $data['storage'] = filter_var($_POST['storage'], FILTER_SANITIZE_STRING);
 
-$itemID = insertItem($data);
 
-$newRow = addRow($data, $itemID, $userID);
 
 
 $new_page = "homepage.php";
