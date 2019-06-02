@@ -20,6 +20,7 @@ $userID = $_SESSION['userID'];
 $newRow = addRow($data, $itemID, $userID);
 
 
-//header("Location: view_scriptures.php");
-header("Location: homepage.php");
+$new_page = "homepage.php";
+header("Location: $new_page");
+die();
 ?>
