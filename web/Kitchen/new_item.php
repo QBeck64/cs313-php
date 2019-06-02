@@ -1,9 +1,4 @@
 <?php
-include("db_connect.php");
-$db = get_db();
-
-session_start();
-
 
 
 
