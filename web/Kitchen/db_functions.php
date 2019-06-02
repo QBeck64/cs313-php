@@ -1,4 +1,5 @@
 <?
+// Select and return the list of types
 function getTypes() {
     global $db;
     $query = "SELECT * FROM types
@@ -10,6 +11,7 @@ function getTypes() {
     return $types;
 }
 
+// Select and return the list of storage locations
 function getStorage() {
     global $db;
     $query = "SELECT * FROM entitylist
@@ -21,6 +23,7 @@ function getStorage() {
     return $entity;
 }
 
+// Insert name, type id, and description into item, then return id
 function insertItem($data) {
     global $db;
     $query = "INSERT INTO item
@@ -35,6 +38,7 @@ function insertItem($data) {
     return $db->lastInsertId();
 }
 
+// Add item id to new row, including quantity, expdate, and entity location
 function addRow($data, $itemID, $userID){
     global $db;
     $query = "INSERT INTO inventory

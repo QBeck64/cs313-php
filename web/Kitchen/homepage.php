@@ -17,19 +17,22 @@ session_start();
 
 <body>
     <h1>What's in the Kitchen?<h1>
+    <!-- Navigation bar --->
 <div class="topnav">
   <a class="active" href="homepage.php">Homepage</a>
   <a href="kitchenFridge.php">Kitchen Fridge</a>
   <a href="communityFridge.php">Community Fridge</a>
   <a href="pantry.php">Pantry</a>
   <a href="storageCloset.php">Storage Closet</a>
+  <!-- Add a form to the Nav bar for user credential verification -->
   <div class="login-container">
     <form action="verifyUser.php" method="post">
       <input type="text" placeholder="Username" name="username">
-      <input type="text" placeholder="Password" name="psw">
+      <input type="password" placeholder="Password" name="psw">
       <button type="submit">Login</button>
     </form>
   </div>
+  <!--- Temporary, shows who is logged on -->
   <p>Currently logged on:<?php echo $_SESSION["username"]?></p>
 </div> 
 
