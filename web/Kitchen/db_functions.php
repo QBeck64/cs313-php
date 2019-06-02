@@ -49,5 +49,6 @@ function addRow($data, $itemID, $userID){
     $statement->execute();
     $statement->closeCursor();
     return $db->lastInsertId();
+}
 
 ?>
