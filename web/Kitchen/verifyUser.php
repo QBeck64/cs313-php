@@ -17,6 +17,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 foreach ($rows as $r) {
     if ($r['username_name']=$user AND $r['password']=$psw) {
         $_SESSION['username'] = $r['username_name'];
+        $_SESSION['userID'] = $r['id'];
     }
 }
 
