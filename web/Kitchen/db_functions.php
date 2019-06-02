@@ -22,7 +22,17 @@ function getStorage() {
 }
 
 function insertItem($data) {
-    return "id";
+    global $db;
+    $query = "INSERT INTO item
+        (item_name, types_id, item_description)
+        VALUES (:item_name, :types_id, :description)";
+    $statement = $db->prepare($query);
+    $statement->bindValue(':item_name',$data['newItem']);
+    $statement->bindValue(':types_id',$data['type']);
+    $statement->bindValue(':item_description',$data['newDescription']);
+    $statement->execute();
+    $statement->closeCursor();
+    return $db->lastInsertId();
 }
 
 function addRow($data, $itemID, $userID){

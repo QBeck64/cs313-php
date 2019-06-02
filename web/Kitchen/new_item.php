@@ -16,7 +16,7 @@ $data['storage'] = filter_var($_POST['storage'], FILTER_SANITIZE_STRING);
 
 $itemID = insertItem($data);
 
-//$newRow = addRow($data, $itemID, $userID);
+$newRow = addRow($data, $itemID, $userID);
 
 
 $new_page = "homepage.php";
