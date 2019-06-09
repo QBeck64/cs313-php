@@ -16,14 +16,13 @@ $data['description']   = filter_var($_POST['updateDescription'], FILTER_SANITIZE
 $data['expdate'] =  date('Y-m-d', strtotime($_POST['updateDate']));
 $data['quantity'] = htmlspecialchars($_POST['updateQuantity']);
 $data['storage'] = filter_var($_POST['updateStorage'], FILTER_SANITIZE_STRING);
-
-echo $data['id'];
 //$itemID = updateItem($data);
 
 //$updateRow = updateRow($data, $itemID, $userID);
+$_SESSION['itemID'] = $data['id'];
 
 // Return to homepage
 $new_page = "homepage.php";
-//header("Location: $new_page");
+header("Location: $new_page");
 die();
 ?>

@@ -82,6 +82,7 @@ session_start();
     }
 
     echo "</table>";
+    echo "<p>" . $_SESSION['itemID'] . "</p>";
     
     ?>
     <div class="Input-container">
