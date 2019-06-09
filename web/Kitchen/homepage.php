@@ -45,11 +45,34 @@ session_start();
                         JOIN entitylist ON inventory.entitylist_id=entitylist.id');
     $stmt->execute();
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    // Get a list of types for update and add items
+    $types = getTypes();
     echo "<table><th>Username</th><th>Item</th><th>Type</th><th>Expiration Date</th><th>Quantity</th><th>Storage Location</th<tr>";
     foreach ($rows as $r) {
         echo "<tr><td>" . $r['username_name'] . "</td><td>" . $r['item_name'] . "</td><td>" . $r['types_name'] . "</td>
         <td>" . $r['expdate'] . "</td><td>" . $r['quantity'] . "</td><td>" . $r['storage'] . 
-        "<td><div class='form-popup' id='myForm'><form action='update_item.php' class='form-container'></form></div></tr>";
+        "<td>
+        <div class='form-popup' id='updateForm'>
+        <form action='update_item.php' method='post' class='form-container'>
+        <h1>Update Row</h1> 
+        <input type='text' placeholder='" . $r['item_name'] . "' name='updateItem'>
+        <select name='updateType'>";
+        foreach($types as $t) {
+            echo "<option value='" . $t['id'] . "'>" . $t['types_name'] . "</option>";
+        }
+        echo "</select>
+        <input type='text' placeholder='" . $r['item_description'] . "' name='updateDescription'>
+        <input type='date' name='updateDate'>
+        input type='number' name='updateQuantity' min='1' max='50'>
+        <select name='updateStorage'>";
+        foreach($storage as $s) {
+            echo "<option value='" . $s['id'] . "'>" . $s['storage'] . "</option>";
+        }
+        echo "</select>
+        <button type='submit'>Update</button>
+        </form>
+        </div>
+        </td></tr>";
 
     }
 
@@ -61,7 +84,6 @@ session_start();
         <input type="text" placeholder="Item Name" name="newItem">
         <select name="type">
         <?php
-         $types = getTypes();
          foreach($types as $t) {
              echo "<option value='" . $t['id'] . "'>" . $t['types_name'] . "</option>";
          }
