@@ -64,7 +64,7 @@ session_start();
         echo "</select>
         <input type='text' name='updateDescription'>" . $r['item_description'] . "</input>
         <input type='date' name='updateDate'>
-        input type='number' name='updateQuantity' min='1' max='50'>
+        <input type='number' name='updateQuantity' min='1' max='50'>
         <select name='updateStorage'>";
         foreach($storage as $s) {
             echo "<option value='" . $s['id'] . "'>" . $s['storage'] . "</option>";
