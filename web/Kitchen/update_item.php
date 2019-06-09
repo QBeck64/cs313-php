@@ -24,6 +24,6 @@ echo $data['id'];
 
 // Return to homepage
 $new_page = "homepage.php";
-header("Location: $new_page");
+//header("Location: $new_page");
 die();
 ?>
