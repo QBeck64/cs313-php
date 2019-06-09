@@ -47,7 +47,10 @@ session_start();
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     echo "<table><th>Username</th><th>Item</th><th>Type</th><th>Expiration Date</th><th>Quantity</th><th>Storage Location</th<tr>";
     foreach ($rows as $r) {
-        echo "<tr><td>" . $r['username_name'] . "</td><td>" . $r['item_name'] . "</td><td>" . $r['types_name'] . "</td><td>" . $r['expdate'] . "</td><td>" . $r['quantity'] . "</td><td>" . $r['storage'] . "</tr>";
+        echo "<tr><td>" . $r['username_name'] . "</td><td>" . $r['item_name'] . "</td><td>" . $r['types_name'] . "</td>
+        <td>" . $r['expdate'] . "</td><td>" . $r['quantity'] . "</td><td>" . $r['storage'] . 
+        "<td><div class='form-popup' id='myForm'><form action='update_item.php' class='form-container'></form></div></tr>";
+
     }
 
     echo "</table>";
