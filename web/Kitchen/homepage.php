@@ -33,8 +33,7 @@ session_start();
       <button type="submit">Login</button>
     </form>
   </div>
-  <!--- Temporary, shows who is logged on -->
-  <p>Currently logged on:<?php echo $_SESSION["username"]?></p>
+ 
 </div> 
 
 <h1>The Kitchen</h1>
@@ -82,7 +81,6 @@ session_start();
     }
 
     echo "</table>";
-    echo "<p>" . $_SESSION['itemID'] . "</p>";
     
     ?>
     <div class="Input-container">

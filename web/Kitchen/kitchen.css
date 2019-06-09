@@ -45,7 +45,7 @@ body {
 
   tr:nth-child(even) {background-color:lightgray;}
 
-  table {
+  table, .Input-container {
       align-content: center;
       border-collapse: collapse;
       margin: 0px auto;
