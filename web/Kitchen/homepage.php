@@ -16,6 +16,7 @@ session_start();
 </head>
 
 <body>
+<script src="kitchen.js">
     <h1>What's in the Kitchen?<h1>
     <!-- Navigation bar --->
 <div class="topnav">
@@ -53,6 +54,7 @@ session_start();
         echo "<tr><td>" . $r['username_name'] . "</td><td>" . $r['item_name'] . "</td><td>" . $r['types_name'] . "</td>
         <td>" . $r['expdate'] . "</td><td>" . $r['quantity'] . "</td><td>" . $r['storage'] . 
         "<td>
+        <button class='open-button' onclick='openForm()'>Update</button>
         <div class='form-popup' id='updateForm'>
         <form action='update_item.php' method='post' class='form-container'>
         <h1>Update Row</h1> 
@@ -65,12 +67,13 @@ session_start();
         <input type='text' name='updateDescription' value='" . $r['item_description'] . "'>
         <input type='date' name='updateDate' value='" . $r['expdate'] . "'>
         <input type='number' value='" . $r['quantity'] . "' name='updateQuantity' min='1' max='50'>
-        <select name='updateStorage'>";
+        <select name='updateStorage' value='" . $r['storage'] . "'>";
         foreach($storage as $s) {
             echo "<option value='" . $s['id'] . "'>" . $s['storage'] . "</option>";
         }
         echo "</select>
         <button type='submit'>Update</button>
+        <button type='button' class='btn cancel' onclick='closeForm()'>Close</button>
         </form>
         </div>
         </td></tr>";
