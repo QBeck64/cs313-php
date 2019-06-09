@@ -57,7 +57,7 @@ function addRow($data, $itemID, $userID){
 
 function updateItem($data) {
     global $db;
-    $query = "INSERT INTO item
+    $query = "UPDATE item
         (item_name, types_id, item_description)
         VALUES (:item_name, :types_id, :item_description)";
     $statement = $db->prepare($query);
