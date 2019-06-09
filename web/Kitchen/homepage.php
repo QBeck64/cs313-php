@@ -73,8 +73,8 @@ session_start();
         }
         echo "</select>
         <button type='submit'>Update</button>
-        "; //<button type='button' class='btn cancel' onclick='closeForm()'>Close</button>
-        "</form>
+        <button type='button' class='btn cancel' onclick='closeForm()'>Close</button>
+        </form>
         </div>
         </td></tr>";
 
