@@ -47,6 +47,7 @@ session_start();
     $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
     // Get a list of types for update and add items
     $types = getTypes();
+    $storage = getStorage();
     echo "<table><th>Username</th><th>Item</th><th>Type</th><th>Expiration Date</th><th>Quantity</th><th>Storage Location</th<tr>";
     foreach ($rows as $r) {
         echo "<tr><td>" . $r['username_name'] . "</td><td>" . $r['item_name'] . "</td><td>" . $r['types_name'] . "</td>
@@ -61,7 +62,7 @@ session_start();
             echo "<option value='" . $t['id'] . "'>" . $t['types_name'] . "</option>";
         }
         echo "</select>
-        <input type='text' placeholder='" . $r['item_description'] . "' name='updateDescription'>
+        <input type='text' name='updateDescription'>" . $r['item_description'] . "</input>
         <input type='date' name='updateDate'>
         input type='number' name='updateQuantity' min='1' max='50'>
         <select name='updateStorage'>";
@@ -94,7 +95,6 @@ session_start();
         <input type="number" name="quantity" min="1" max="50">
         <select name="storage">
         <?php
-        $storage = getStorage();
         foreach($storage as $s) {
             echo "<option value='" . $s['id'] . "'>" . $s['storage'] . "</option>";
         }
