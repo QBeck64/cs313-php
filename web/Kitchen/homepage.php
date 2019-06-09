@@ -72,7 +72,7 @@ session_start();
             echo "<option value='" . $s['id'] . "'>" . $s['storage'] . "</option>";
         }
         echo "</select>
-        <button type='submit'>Update</button>
+        <button type='submit' class='btn'>Update</button>
         <button type='button' class='btn cancel' onclick='closeForm()'>Close</button>
         </form>
         </div>
