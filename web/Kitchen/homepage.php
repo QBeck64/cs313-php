@@ -56,15 +56,15 @@ session_start();
         <div class='form-popup' id='updateForm'>
         <form action='update_item.php' method='post' class='form-container'>
         <h1>Update Row</h1> 
-        <input type='text' placeholder='" . $r['item_name'] . "' name='updateItem'>
+        <input type='text' value='" . $r['item_name'] . "' name='updateItem'>
         <select name='updateType'>";
         foreach($types as $t) {
             echo "<option value='" . $t['id'] . "'>" . $t['types_name'] . "</option>";
         }
         echo "</select>
-        <input type='text' name='updateDescription'>" . $r['item_description'] . "</input>
-        <input type='date' name='updateDate'>
-        <input type='number' name='updateQuantity' min='1' max='50'>
+        <input type='text' name='updateDescription' value='" . $r['item_description'] . "'>
+        <input type='date' name='updateDate' value='" . $r['expdate'] . "'>
+        <input type='number' value='" . $r['quantity'] . "' name='updateQuantity' min='1' max='50'>
         <select name='updateStorage'>";
         foreach($storage as $s) {
             echo "<option value='" . $s['id'] . "'>" . $s['storage'] . "</option>";
