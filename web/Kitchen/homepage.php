@@ -16,7 +16,7 @@ session_start();
 </head>
 
 <body>
-<script src="kitchen.js">
+<script src="kitchen.js"></script>
     <h1>What's in the Kitchen?<h1>
     <!-- Navigation bar --->
 <div class="topnav">
