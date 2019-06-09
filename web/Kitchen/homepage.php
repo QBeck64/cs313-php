@@ -72,6 +72,7 @@ session_start();
             echo "<option value='" . $s['id'] . "'>" . $s['storage'] . "</option>";
         }
         echo "</select>
+        <input name='updateID' type='hidden'>
         <button type='submit' class='btn'>Update</button>
         <button type='button' class='btn cancel' onclick='closeForm()'>Close</button>
         </form>

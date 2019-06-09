@@ -55,4 +55,34 @@ function addRow($data, $itemID, $userID){
     return $db->lastInsertId();
 }
 
+function updateItem($data) {
+    global $db;
+    $query = "INSERT INTO item
+        (item_name, types_id, item_description)
+        VALUES (:item_name, :types_id, :item_description)";
+    $statement = $db->prepare($query);
+    $statement->bindValue(':item_name',$data['item']);
+    $statement->bindValue(':types_id',$data['type']);
+    $statement->bindValue(':item_description',$data['description']);
+    $statement->execute();
+    $statement->closeCursor();
+    return $db->lastInsertId();
+}
+
+function updateRow($data, $itemID, $userID){
+    global $db;
+    $query = "INSERT INTO inventory
+        (username_id, item_id, expdate, quantity, entitylist_id)
+        VALUES (:username_id, :item_id, :expdate, :quantity, :entitylist_id)";
+    $statement = $db->prepare($query);
+    $statement->bindValue(':username_id',$userID);
+    $statement->bindValue(':item_id',$itemID);
+    $statement->bindValue(':expdate',$data['expdate']);
+    $statement->bindValue(':quantity',$data['quantity']);
+    $statement->bindValue(':entitylist_id',$data['storage']);
+    $statement->execute();
+    $statement->closeCursor();
+    return $db->lastInsertId();
+}
+
 ?>
