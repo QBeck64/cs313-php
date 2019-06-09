@@ -58,7 +58,7 @@ function addRow($data, $itemID, $userID){
 function updateItem($data) {
     global $db;
     $query = "UPDATE item
-        (item_name, types_id, item_description)
+        SET (item_name, types_id, item_description)
         VALUES (:item_name, :types_id, :item_description)";
     $statement = $db->prepare($query);
     $statement->bindValue(':item_name',$data['item']);
@@ -71,8 +71,8 @@ function updateItem($data) {
 
 function updateRow($data, $itemID, $userID){
     global $db;
-    $query = "INSERT INTO inventory
-        (username_id, item_id, expdate, quantity, entitylist_id)
+    $query = "UPDATE inventory
+        SET (username_id, item_id, expdate, quantity, entitylist_id)
         VALUES (:username_id, :item_id, :expdate, :quantity, :entitylist_id)";
     $statement = $db->prepare($query);
     $statement->bindValue(':username_id',$userID);
